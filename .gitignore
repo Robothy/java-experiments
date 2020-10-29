@@ -1,0 +1,10 @@
+# InteliJ
+.idea
+*.iml
+
+
+# build
+*.class
+.build
+
+
