@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  jdk6:
+    image: java:6-jdk
+    environment:
+    - DEEBUG=1
+    volumes:
+      - .:/code
+    command: bash -c "mkdir -p /src 
+      && cp /code/*.java /src 
+      && cd /src
+      && java -version 
+      && echo 1 > /code/jdk7"
+    
+  jdk7:
+    image: java:7-jdk
+    depends_on: 
+      - jdk6
+    volumes:
+      - .:/code
+    command: bash -c "mkdir -p /src 
+      && cp /code/*.java /src
+      && cd /src
+      && java -version"
+    
