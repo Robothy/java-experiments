@@ -23,7 +23,7 @@ class TreeifyThresholdTest{
 		System.out.println(table[1].getClass()); // 输出 class java.util.HashMap$Node
 		
 		map.put(new KeyNode(), 1);  // 9
-		System.out.println(table[1].getClass()); // 输出 class java.util.HashMap$Node
+		System.out.println(table[1].getClass()); // 输出 class java.util.HashMap$TreeNode
 	}	
 }
 
