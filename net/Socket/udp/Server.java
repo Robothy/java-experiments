@@ -14,7 +14,7 @@ class Server {
         try(DatagramSocket serv = new DatagramSocket(9191)){
             
             while(true){
-                serv.receive(pac); // 接收数据报。如果没有数据报发送过去，会阻塞
+                serv.receive(pac); // 接收数据报。如果没有数据报发送过来，会阻塞
                 System.out.println("Message --> " + new String(pac.getData(), 0, pac.getLength()));
             }
             
