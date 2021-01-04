@@ -12,7 +12,8 @@ class Server {
             while(true){
                 // 接收连接，如果没有连接，accept() 方法会阻塞
                 socket = serv.accept();
-                
+				System.out.println("New client connected. ");
+				
                 // 获取输入流，并使用 BufferedInputStream 和 InputStreamReader 装饰，方便以字符流的形式处理，方便一行行读取内容
                 try(BufferedReader in = new BufferedReader( new InputStreamReader(socket.getInputStream()) )){
                     String msg = null;
