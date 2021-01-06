@@ -1,6 +1,7 @@
 # InteliJ
 .idea
 *.iml
+/out/
 
 
 # build
@@ -11,4 +12,6 @@
 # jad
 *.jad
 
+# Data Files
 *.dat
+*.csv
