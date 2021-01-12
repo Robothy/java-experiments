@@ -51,7 +51,7 @@ class FireFlag {
  */
 class Calculator extends Thread{
 
-    private FireFlag fireFlag;
+    private final FireFlag fireFlag;
 
     public Calculator(FireFlag fireFlag){
         this.fireFlag = fireFlag;
