@@ -16,9 +16,9 @@ public class EchoServer {
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);       // 将服务器通道注册到选择器 selector 中，注册事件为 ACCEPT
 
         DatagramChannel datagramChannel = DatagramChannel.open();             // 打开套接字通道
-        datagramChannel.configureBlocking(false);                             // 配置套接字通道为非阻塞模式
+        datagramChannel.configureBlocking(false);                             // 配置通道为非阻塞模式
         datagramChannel.bind(new InetSocketAddress(9090));               // 绑定 UDP 端口 9090
-        datagramChannel.register(selector, SelectionKey.OP_READ);             // 将套接字通道注册到选择器 selector 中，注册事件为读取数据
+        datagramChannel.register(selector, SelectionKey.OP_READ);             // 将通道注册到选择器 selector 中，注册事件为读取数据
 
         ByteBuffer buf = ByteBuffer.allocate(1024);                           // 分配一个 1024 字节的堆字节缓冲区
 

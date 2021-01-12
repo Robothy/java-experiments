@@ -42,5 +42,4 @@ public class TcpClient {
             if(!socketChannel.isOpen()) break;
         }
     }
-
 }
