@@ -40,7 +40,7 @@ public class TwinsLockTest {
  */
 class TwinsLock {
 
-    static class Sync extends AbstractQueuedSynchronizer {
+    private static class Sync extends AbstractQueuedSynchronizer {
 
         public Sync() {
             setState(2);
